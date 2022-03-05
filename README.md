@@ -1,6 +1,6 @@
 # Nasa
 We are going to use nasa free api in this project
-# Objective:
+## Objective:
 Use the Astronomy photo of the day(APOD) API of Nasa and cover the following use cases:
 1. Given: The NASA APOD API is up (working) AND the phone is connected to the internet When:
    The user arrives at the APOD page for the first time today Then: The page should display the
@@ -18,7 +18,15 @@ Use the Astronomy photo of the day(APOD) API of Nasa and cover the following use
    The APOD image loads fully on the screen Then: The user should be able to see the complete
    image without distortion or clipping
    
-# Project architecture design:
+## How to test with the APK:
+The APK is uploaded at root level with file name "app-debug.apk' so anyone can push or install the apk 
+in emulator or physical device and can run the app.
+run command:
+1. adb install '**bold filepath **' where the apk downloaded
+2. Or direct download it in the device and allow install from untrusted source and click on install
+
+   
+## Project architecture design:
  MVVM with repository pattern.
  Language: Kotlin
  Network call: using HTTPUrlConnection
@@ -26,13 +34,13 @@ Use the Astronomy photo of the day(APOD) API of Nasa and cover the following use
  Asynchronous behavior: Coroutines
  DataBinding used: yes
 
-# Improvement areas:
+### Improvement areas:
 1. Views can be bind in xml files itself so that activity can be more clean
 2. Repository class can be more clean by taking the decision that how to get data from persistence or 
     from the network.
     
  
-# TradeOffs:
+### TradeOffs:
 1. Used shared preference for saving the date, explanation and title due to less amount of time.
     but i think its good if we only need one image's primitive details to save.
    
